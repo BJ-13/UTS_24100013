@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Matakuliah extends Model
 {
-    protected $fillable = [
-        'kode',
-        'nama_matakuliah'
-    ];
+    use HasFactory;
 
-    protected $table = 'matakuliahs';
+    
+    protected $table = 'matakuliah';
+
+    protected $guarded = [];
 }

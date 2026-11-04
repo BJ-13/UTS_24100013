@@ -2,18 +2,22 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Mahasiswa extends Model
 {
+    use HasFactory;
+
+    protected $table = 'mahasiswas'; 
+    protected $primaryKey = 'id';
+    public $incrementing = false;
+    protected $keyType = 'string';
+
     protected $fillable = [
+        'id',
         'NIM',
         'name',
-        'tempat_lahir',
-        'tanggal_lahir',
         'jurusan',
-        'angkatan'
     ];
-
-    protected $table = 'mahasiswas';
 }
